@@ -52,6 +52,7 @@
     <Compile Include="Assets\触らない\TutorialInfo\Scripts\Readme.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\3D Laboratory Environment with Appratus\Documentation\3D Laboratory environment with appratus.txt" />
     <None Include="Assets\LabMapAsset\Readme.txt" />
   </ItemGroup>
   <ItemGroup>
