@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Fusion;
@@ -14,20 +15,30 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
     [Header("Network Prefabs")]
     [SerializeField] private NetworkPrefabRef playerPrefab;
 
-    // シーンのBuild Index定義
-    public const int TITLE_SCENE_INDEX = 0;
-    public const int LOBBY_SCENE_INDEX = 1;
-    public const int STAGE_SCENE_INDEX = 2;
+    // Build Settings の順番と一致させる定数
+    public const int TITLE_SCENE_INDEX = 0;    // 1,Title
+    public const int LOBBY_SCENE_INDEX = 1;    // 2,Lobby
+    public const int LOAD_SCENE_INDEX = 2;     // 3,Load
+    public const int BASE_SCENE_INDEX = 3;     // 4,Base
+    public const int STAGE_SCENE_INDEX = 4;    // 5,Stage
+    public const int RESULT_SCENE_INDEX = 5;   // 6,Result
+    public const int BOSS_SCENE_INDEX = 6;     // 7,Boss
+    public const int GAMEOVER_SCENE_INDEX = 7; // 8,Gameover
 
     public NetworkRunner Runner { get; private set; }
-    private GameObject _runnerObject; // Runner専用の独立オブジェクト
+    private GameObject _runnerObject;
     private Dictionary<PlayerRef, NetworkObject> _spawnedCharacters = new Dictionary<PlayerRef, NetworkObject>();
 
-    // UI側へ状態変化を通知するためのイベント
+    // ロード画面を経由した後の「本当の行き先」を記憶する変数
+    private int _nextTargetSceneIndex = -1;
+
+    // 今回のマッチで選ばれたスタート地点エリアと割り当て済み人数
+    private SpawnArea _selectedSpawnArea;
+    private int _spawnedPlayerCount = 0;
+
     public event Action<List<SessionInfo>> OnSessionListChanged;
     public event Action OnPlayerListChanged;
 
-    // 視点回転用
     private float _yaw;
     private float _pitch;
 
@@ -44,9 +55,6 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
         }
     }
 
-    /// <summary>
-    /// 既存のRunner専用オブジェクトを安全にシャットダウン・破棄する
-    /// </summary>
     private async Task ResetRunnerAsync()
     {
         if (Runner != null)
@@ -63,11 +71,9 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
         }
 
         _spawnedCharacters.Clear();
+        _nextTargetSceneIndex = -1;
     }
 
-    /// <summary>
-    /// 新しい専用GameObject上に真っさらなNetworkRunnerを生成する
-    /// </summary>
     private NetworkRunner CreateNewRunner()
     {
         _runnerObject = new GameObject("SessionRunner");
@@ -78,13 +84,9 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
         return newRunner;
     }
 
-    /// <summary>
-    /// サーバー一覧を取得するためにロビーへ接続する（「参加する」ボタン用）
-    /// </summary>
     public async Task JoinLobbyForServerList()
     {
         await ResetRunnerAsync();
-
         Runner = CreateNewRunner();
 
         var result = await Runner.JoinSessionLobby(SessionLobby.ClientServer);
@@ -94,19 +96,14 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
         }
     }
 
-    /// <summary>
-    /// ホストとして部屋を作成し、自動で LobbyScene (Index 1) へ遷移する
-    /// </summary>
     public async Task CreateHostAndGoToLobby(string roomName)
     {
         await ResetRunnerAsync();
-
         Runner = CreateNewRunner();
         Runner.ProvideInput = true;
 
         var sceneInfo = new NetworkSceneInfo();
         sceneInfo.AddSceneRef(SceneRef.FromIndex(LOBBY_SCENE_INDEX), LoadSceneMode.Single);
-
         var sceneManager = _runnerObject.AddComponent<NetworkSceneManagerDefault>();
 
         var result = await Runner.StartGame(new StartGameArgs()
@@ -124,13 +121,9 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
         }
     }
 
-    /// <summary>
-    /// クライアントとして部屋に参加する（ホストがいる LobbyScene へ自動で同期遷移する）
-    /// </summary>
     public async Task JoinRoomAndGoToLobby(string roomName)
     {
         await ResetRunnerAsync();
-
         Runner = CreateNewRunner();
         Runner.ProvideInput = true;
 
@@ -149,33 +142,46 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
         }
     }
 
-    /// <summary>
-    /// ロビー画面から「戻る」を押したとき、通信を切断して TitleScene (Index 0) に戻る
-    /// </summary>
     public async Task LeaveSessionAndReturnToTitle()
     {
         await ResetRunnerAsync();
         SceneManager.LoadScene(TITLE_SCENE_INDEX);
     }
 
-    /// <summary>
-    /// サーバー選択画面からロビー検索だけ解除してタイトルパネルに戻る用
-    /// </summary>
     public async Task LeaveLobbySearch()
     {
         await ResetRunnerAsync();
     }
 
     /// <summary>
-    /// ホストが呼び出し、全プレイヤーを一括で StageScene (Index 2) へ遷移させる
+    /// 【重要】3,Load シーンを経由して指定したシーンへ全員で移動する（ホスト専用）
+    /// 例: NetworkManager.Instance.LoadSceneWithLoadingScreen(NetworkManager.BASE_SCENE_INDEX);
     /// </summary>
-    public void LoadStageScene()
+    public void LoadSceneWithLoadingScreen(int targetSceneIndex)
     {
         if (Runner != null && Runner.IsServer)
         {
-            Runner.SessionInfo.IsOpen = false;
-            Runner.LoadScene(SceneRef.FromIndex(STAGE_SCENE_INDEX), LoadSceneMode.Single);
+            // ロビーからの出発時は途中参加を締め切る
+            if (SceneManager.GetActiveScene().buildIndex == LOBBY_SCENE_INDEX)
+            {
+                Runner.SessionInfo.IsOpen = false;
+            }
+
+            // 本当の行き先を保存し、まずは全員で 3,Load (Index 2) へ移動する
+            _nextTargetSceneIndex = targetSceneIndex;
+            _spawnedCharacters.Clear();
+            Runner.LoadScene(SceneRef.FromIndex(LOAD_SCENE_INDEX), LoadSceneMode.Single);
         }
+    }
+
+    /// <summary>
+    /// プレイヤーキャラクターを出現させるべきプレイ用シーンかどうかを判定
+    /// </summary>
+    private bool IsGameplayScene(int buildIndex)
+    {
+        return buildIndex == BASE_SCENE_INDEX ||
+               buildIndex == STAGE_SCENE_INDEX ||
+               buildIndex == BOSS_SCENE_INDEX;
     }
 
     #region INetworkRunnerCallbacks 実装
@@ -189,7 +195,8 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
     {
         OnPlayerListChanged?.Invoke();
 
-        if (runner.IsServer && SceneManager.GetActiveScene().buildIndex == STAGE_SCENE_INDEX)
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        if (runner.IsServer && IsGameplayScene(currentIndex))
         {
             SpawnPlayerCharacter(runner, player);
         }
@@ -210,12 +217,37 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
     {
         int currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
 
+        // 1. ロビー画面に到着した場合
         if (currentBuildIndex == LOBBY_SCENE_INDEX)
         {
             OnPlayerListChanged?.Invoke();
         }
-        else if (runner.IsServer && currentBuildIndex == STAGE_SCENE_INDEX)
+        // 2. ロード中継画面 (3,Load) に到着した場合
+        else if (currentBuildIndex == LOAD_SCENE_INDEX)
         {
+            if (runner.IsServer && _nextTargetSceneIndex >= 0)
+            {
+                // ロード画面を確実に描画させてから、本番シーンの読み込みを開始する
+                StartCoroutine(ProceedToTargetSceneRoutine());
+            }
+        }
+        // 3. ゲームプレイ用シーン (Base / Stage / Boss) に到着した場合
+        else if (runner.IsServer && IsGameplayScene(currentBuildIndex))
+        {
+            _spawnedCharacters.Clear();
+            _spawnedPlayerCount = 0;
+
+            // シーン内の全SpawnAreaを取得し、ランダムに1つ決定する
+            SpawnArea[] areas = FindObjectsByType<SpawnArea>(FindObjectsSortMode.None);
+            _selectedSpawnArea = (areas.Length > 0)
+                ? areas[UnityEngine.Random.Range(0, areas.Length)]
+                : null;
+
+            if (_selectedSpawnArea != null)
+            {
+                Debug.Log($"[Spawn] スタート地点に「{_selectedSpawnArea.name}」が選ばれました");
+            }
+
             foreach (var player in runner.ActivePlayers)
             {
                 SpawnPlayerCharacter(runner, player);
@@ -223,13 +255,56 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
         }
     }
 
+    private IEnumerator ProceedToTargetSceneRoutine()
+    {
+        // ロード画面のUIが表示されるよう少し待機（0.5秒）
+        yield return new WaitForSeconds(0.5f);
+
+        int destination = _nextTargetSceneIndex;
+        _nextTargetSceneIndex = -1;
+
+        if (Runner != null && Runner.IsServer && destination >= 0)
+        {
+            Runner.LoadScene(SceneRef.FromIndex(destination), LoadSceneMode.Single);
+        }
+    }
+
     private void SpawnPlayerCharacter(NetworkRunner runner, PlayerRef player)
     {
         if (!_spawnedCharacters.ContainsKey(player))
         {
-            Vector3 spawnPos = new Vector3((player.RawEncoded % 4) * 2.0f, 1.0f, 0);
-            NetworkObject networkPlayerObj = runner.Spawn(playerPrefab, spawnPos, Quaternion.identity, player);
+            Vector3 spawnPos;
+            Quaternion spawnRot;
+
+            if (_selectedSpawnArea != null)
+            {
+                var transformData = _selectedSpawnArea.GetSpawnTransform(_spawnedPlayerCount);
+                spawnPos = transformData.position;
+                spawnRot = transformData.rotation;
+            }
+            else
+            {
+                spawnPos = new Vector3((_spawnedPlayerCount % 4) * 2.0f, 1.0f, 0);
+                spawnRot = Quaternion.identity;
+            }
+
+            NetworkObject networkPlayerObj = runner.Spawn(
+                playerPrefab,
+                spawnPos,
+                spawnRot,
+                player,
+                onBeforeSpawned: (runner, obj) =>
+                {
+                    var setup = obj.GetComponent<NetworkPlayerSetup>();
+                    if (setup != null)
+                    {
+                        setup.InitializeSpawnTransform(spawnPos, spawnRot);
+                    }
+                }
+            );
+
             _spawnedCharacters.Add(player, networkPlayerObj);
+            _spawnedPlayerCount++;
         }
     }
 
@@ -237,7 +312,8 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
     {
         var data = new NetworkInputData();
 
-        if (SceneManager.GetActiveScene().buildIndex == STAGE_SCENE_INDEX)
+        // プレイ用シーンにいる時だけ操作入力を受け付ける（Load画面では動かない）
+        if (IsGameplayScene(SceneManager.GetActiveScene().buildIndex))
         {
             if (Keyboard.current != null)
             {

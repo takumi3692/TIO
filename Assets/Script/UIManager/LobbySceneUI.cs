@@ -81,8 +81,8 @@ public class LobbySceneUI : MonoBehaviour
     private void OnClickStartGame()
     {
         startGameButton.interactable = false;
-        // 全員一斉に StageScene (Index 2) へ移動！
-        NetworkManager.Instance.LoadStageScene();
+        // 3,Load を経由して 5,Stage (Index 4) へ全員で移動する
+        NetworkManager.Instance.LoadSceneWithLoadingScreen(NetworkManager.STAGE_SCENE_INDEX);
     }
 
     private async void OnClickLeaveLobby()

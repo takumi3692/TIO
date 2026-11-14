@@ -62,6 +62,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\MyAssets\EasyPeasyFirstPersonController\Scripts\PlayerStateFactory.cs" />
+    <Compile Include="Assets\Script\Network\NetworkPlayerSetup.cs" />
+    <Compile Include="Assets\Script\Network\LoadingIconRotator.cs" />
     <Compile Include="Assets\Script\Network\NetworkManager.cs" />
     <Compile Include="Assets\Script\Network\NetworkItemSync.cs" />
     <Compile Include="Assets\MyAssets\EasyPeasyFirstPersonController\Scripts\States\PlayerJumpingState.cs" />
@@ -75,6 +77,7 @@
     <Compile Include="Assets\MyAssets\EasyPeasyFirstPersonController\Scripts\InputManager.cs" />
     <Compile Include="Assets\MyAssets\EasyPeasyFirstPersonController\Scripts\PlayerBaseState.cs" />
     <Compile Include="Assets\Script\Player\PlayerAnimationController.cs" />
+    <Compile Include="Assets\Script\Network\SpawnArea.cs" />
     <Compile Include="Assets\MyAssets\EasyPeasyFirstPersonController\Scripts\IInputManager.cs" />
     <Compile Include="Assets\MyAssets\EasyPeasyFirstPersonController\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Script\UIManager\LobbySceneUI.cs" />
@@ -107,6 +110,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
     <None Include="Assets\Photon\Fusion\Assemblies\Fusion.Common.xml" />
     <None Include="Assets\Photon\Fusion\release_history.txt" />
+    <None Include="Assets\3D Laboratory Environment with Appratus\Documentation\3D Laboratory environment with appratus.txt" />
     <None Include="Assets\Photon\Fusion\Plugins\NanoSockets\NanoSockets\Dynamic\NanoSockets.dll" />
     <None Include="Assets\Photon\Fusion\Assemblies\Fusion.Runtime.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
@@ -134,6 +138,7 @@
     <None Include="Assets\Photon\Fusion\Assemblies\Fusion.Sockets.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\LabMapAsset\Readme.txt" />
     <None Include="Assets\Photon\Fusion\Plugins\NanoSockets\Windows\arm64\nanosockets.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Photon\Fusion\Plugins\NanoSockets\Metro\ARM\libnanosockets.dll" />
