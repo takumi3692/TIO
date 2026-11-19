@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4231275417704076927}
-  - component: {fileID: 2263419755509058660}
-  - component: {fileID: 1566174183303043590}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -34,44 +32,6 @@ Transform:
   - {fileID: 6229976219439719629}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2263419755509058660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137495406704343290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Fusion.Runtime.dll::Fusion.NetworkObject
-  SortKey: 3351211913
-  SendPriority: 1
-  EnableInterpolation: 1
-  Flags: 262146
-  NestedObjects: []
-  NetworkedBehaviours:
-  - {fileID: 1566174183303043590}
-  ForceRemoteRenderTimeframe: 0
---- !u!114 &1566174183303043590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137495406704343290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbb14916b96276048b69a57931bb3295, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NetworkPlayerSetup
-  characterRoot: {fileID: 6229976219439719629}
-  characterAnimator: {fileID: 3217525027065317066}
-  localOnlyObjects:
-  - {fileID: 6229976219744705876}
-  localOnlyComponents:
-  - {fileID: 6229976219439719631}
 --- !u!1001 &2982706121315488423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -151,22 +111,6 @@ PrefabInstance:
 --- !u!4 &6229976219439719629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9156347144040445546, guid: c82236c16aae9d34fbd437f8dea6e2c9, type: 3}
-  m_PrefabInstance: {fileID: 2982706121315488423}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6229976219439719631 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9156347144040445544, guid: c82236c16aae9d34fbd437f8dea6e2c9, type: 3}
-  m_PrefabInstance: {fileID: 2982706121315488423}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2922308556bc98e4898cb3309250e781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &6229976219744705876 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9156347144824098803, guid: c82236c16aae9d34fbd437f8dea6e2c9, type: 3}
   m_PrefabInstance: {fileID: 2982706121315488423}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9064730509139573595
