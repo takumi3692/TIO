@@ -3,15 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|c:\\users\\mitsu\\documents\\github\\tio\\assets\\script\\network\\networkplayersetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\network\\networkplayersetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|c:\\users\\mitsu\\documents\\github\\tio\\assets\\script\\network\\networkitemsync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\network\\networkitemsync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\assets\\script\\itemnetwork\\networkpickupitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\itemnetwork\\networkpickupitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\assets\\script\\network\\networkmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\network\\networkmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|c:\\users\\mitsu\\documents\\github\\tio\\assets\\script\\uimanager\\lobbysceneui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\assets\\script\\network\\networkplayersetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\network\\networkplayersetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\assets\\script\\uimanager\\lobbysceneui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\uimanager\\lobbysceneui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -29,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\assets\\script\\network\\roomlistitemui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\network\\roomlistitemui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\assets\\script\\network\\networkitemsync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\network\\networkitemsync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\assets\\script\\network\\simpleplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,36 +58,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NetworkPlayerSetup.cs",
-              "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\NetworkPlayerSetup.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Network\\NetworkPlayerSetup.cs",
-              "ToolTip": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\NetworkPlayerSetup.cs",
-              "RelativeToolTip": "Assets\\Script\\Network\\NetworkPlayerSetup.cs",
-              "ViewState": "AgIAAI4AAAAAAAAAAAAAAK4AAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "NetworkPickupItem.cs",
+              "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\ItemNetwork\\NetworkPickupItem.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ItemNetwork\\NetworkPickupItem.cs",
+              "ToolTip": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\ItemNetwork\\NetworkPickupItem.cs",
+              "RelativeToolTip": "Assets\\Script\\ItemNetwork\\NetworkPickupItem.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAADUAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-14T16:13:14.473Z",
+              "WhenOpened": "2026-11-19T17:09:18.581Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SpawnArea.cs",
-              "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\SpawnArea.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Network\\SpawnArea.cs",
-              "ToolTip": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\SpawnArea.cs",
-              "RelativeToolTip": "Assets\\Script\\Network\\SpawnArea.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAqwDsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-14T15:36:29.156Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "LoadingIconRotator.cs",
               "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\LoadingIconRotator.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Network\\LoadingIconRotator.cs",
@@ -95,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "LobbySceneUI.cs",
               "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\UIManager\\LobbySceneUI.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\UIManager\\LobbySceneUI.cs",
@@ -103,12 +95,11 @@
               "RelativeToolTip": "Assets\\Script\\UIManager\\LobbySceneUI.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAQwFUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-14T15:18:33.194Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-14T15:18:33.194Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "RoomListItemUI.cs",
               "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\RoomListItemUI.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Network\\RoomListItemUI.cs",
@@ -120,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "TitleSceneUI.cs",
               "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\TitleSceneUI.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Network\\TitleSceneUI.cs",
@@ -131,32 +122,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "NetworkManager.cs",
               "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\NetworkManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Network\\NetworkManager.cs",
               "ToolTip": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\NetworkManager.cs",
               "RelativeToolTip": "Assets\\Script\\Network\\NetworkManager.cs",
-              "ViewState": "AgIAABQBAAAAAAAAAAAqwDQBAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAANoAAAAAAAAAAAAmwDQBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-11T12:09:24.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-11T12:09:24.653Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "NetworkItemSync.cs",
               "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\NetworkItemSync.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Network\\NetworkItemSync.cs",
               "ToolTip": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\NetworkItemSync.cs",
               "RelativeToolTip": "Assets\\Script\\Network\\NetworkItemSync.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAmwDYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAMsAAAAAAAAAAAAAAOsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-11T12:05:24.769Z"
+              "WhenOpened": "2026-11-11T12:05:24.769Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
+              "Title": "SpawnArea.cs",
+              "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\SpawnArea.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Network\\SpawnArea.cs",
+              "ToolTip": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\SpawnArea.cs",
+              "RelativeToolTip": "Assets\\Script\\Network\\SpawnArea.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAqwDsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-14T15:36:29.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NetworkPlayerSetup.cs",
+              "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\NetworkPlayerSetup.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Network\\NetworkPlayerSetup.cs",
+              "ToolTip": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\NetworkPlayerSetup.cs",
+              "RelativeToolTip": "Assets\\Script\\Network\\NetworkPlayerSetup.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAABFwK4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-14T16:13:14.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "SimplePlayerController.cs",
               "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\SimplePlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Network\\SimplePlayerController.cs",
@@ -168,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "NetworkInputData.cs",
               "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\NetworkInputData.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Network\\NetworkInputData.cs",
@@ -180,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "NetworkLauncher.cs",
               "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\NetworkLauncher.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Network\\NetworkLauncher.cs",
