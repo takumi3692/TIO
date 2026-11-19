@@ -147,12 +147,22 @@ public class PlayerInventory : MonoBehaviour
     {
         if (Keyboard.current == null) return;
 
+        // Gキーでアイテムを落とす
         if (Keyboard.current.gKey.wasPressedThisFrame)
+        {
             DropItem();
+        }
 
+        // 左クリック
         if (Mouse.current != null &&
             Mouse.current.leftButton.wasPressedThisFrame)
-            ThrowItem();
+        {
+            // 武器以外なら投げる
+            if (!IsSelectedWeapon())
+            {
+                ThrowItem();
+            }
+        }
     }
 
     public void DropItem()
@@ -231,5 +241,30 @@ public class PlayerInventory : MonoBehaviour
                 ? filledSlotColor
                 : emptySlotColor;
         }
-}
+    }
+
+    public bool HasSelectedItem()
+    {
+        return items[selectedSlot] != null;
+    }
+
+    
+    public bool IsSelectedWeapon()
+    {
+        PickupItem item = items[selectedSlot];
+
+        if (item == null) return false;
+
+        return item.GetComponent<WeaponItem>() != null;
+    }
+
+    public WeaponItem GetSelectedWeapon()
+    {
+        PickupItem item = items[selectedSlot];
+
+        if (item == null) return null;
+
+        return item.GetComponent<WeaponItem>();
+    }
+
 }
