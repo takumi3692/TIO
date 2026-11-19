@@ -9,6 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4231275417704076927}
+  - component: {fileID: 4231910257056942718}
+  - component: {fileID: 7842804885407639306}
+  - component: {fileID: 3839573213166498865}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -34,6 +37,59 @@ Transform:
   - {fileID: 4250353609791378757}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4231910257056942718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137495406704343290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fusion.Runtime.dll::Fusion.NetworkObject
+  SortKey: 2986276230
+  SendPriority: 1
+  EnableInterpolation: 1
+  Flags: 262146
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: 7842804885407639306}
+  - {fileID: 3839573213166498865}
+  ForceRemoteRenderTimeframe: 0
+--- !u!114 &7842804885407639306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137495406704343290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047b25d22d6175649bc4b0f66b2543d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NetworkItemSync
+  thirdPersonHoldOffset: {x: 0.35, y: 1.1, z: 0.45}
+--- !u!114 &3839573213166498865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137495406704343290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb14916b96276048b69a57931bb3295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NetworkPlayerSetup
+  characterRoot: {fileID: 6229976219439719629}
+  characterAnimator: {fileID: 3217525027065317066}
+  localOnlyObjects:
+  - {fileID: 6229976219744705876}
+  - {fileID: 6229143347362827992}
+  - {fileID: 8198190507275499685}
+  localOnlyComponents: []
 --- !u!1 &649699829723311052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,9 +1637,15 @@ MonoBehaviour:
   itemLayer:
     serializedVersion: 2
     m_Bits: 4294967295
+  nearbyPickupDistance: 1.5
 --- !u!4 &6229976219439719629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9156347144040445546, guid: c82236c16aae9d34fbd437f8dea6e2c9, type: 3}
+  m_PrefabInstance: {fileID: 2982706121315488423}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6229976219744705876 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9156347144824098803, guid: c82236c16aae9d34fbd437f8dea6e2c9, type: 3}
   m_PrefabInstance: {fileID: 2982706121315488423}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9064730509139573595

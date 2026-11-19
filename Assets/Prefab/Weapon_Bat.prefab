@@ -47,6 +47,8 @@ GameObject:
   - component: {fileID: 220935551125049285}
   - component: {fileID: 4132141783125167058}
   - component: {fileID: 932416818974266388}
+  - component: {fileID: 8739933904647684}
+  - component: {fileID: 3351952126277693019}
   m_Layer: 0
   m_Name: BatPickup
   m_TagString: Untagged
@@ -179,6 +181,39 @@ MonoBehaviour:
   weaponModel: {fileID: 5543153302388322969}
   swingRotation: {x: 90, y: 0, z: 0}
   swingDuration: 0.2
+--- !u!114 &8739933904647684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5629376581548620364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fusion.Runtime.dll::Fusion.NetworkObject
+  SortKey: 0
+  SendPriority: 1
+  EnableInterpolation: 1
+  Flags: 262144
+  NestedObjects: []
+  NetworkedBehaviours: []
+  ForceRemoteRenderTimeframe: 0
+--- !u!114 &3351952126277693019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5629376581548620364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caaf227e496780c4a93d8590d93a9be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NetworkPickupItem
+  _IsHeld:
+    RawValue: 0
 --- !u!1001 &3878223666864584542
 PrefabInstance:
   m_ObjectHideFlags: 0

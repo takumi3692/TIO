@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\network\\networkitemsync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|c:\\users\\mitsu\\documents\\github\\tio\\assets\\script\\itemnetwork\\networkpickupitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\assets\\script\\itemnetwork\\networkpickupitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\itemnetwork\\networkpickupitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -68,7 +68,7 @@
               "RelativeDocumentMoniker": "Assets\\Script\\ItemNetwork\\NetworkPickupItem.cs",
               "ToolTip": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\ItemNetwork\\NetworkPickupItem.cs",
               "RelativeToolTip": "Assets\\Script\\ItemNetwork\\NetworkPickupItem.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAAD8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAADUAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-19T17:09:18.581Z",
               "EditorCaption": ""
@@ -118,8 +118,7 @@
               "ToolTip": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\TitleSceneUI.cs",
               "RelativeToolTip": "Assets\\Script\\Network\\TitleSceneUI.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-11T12:10:30.27Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-11T12:10:30.27Z"
             },
             {
               "$type": "Document",
