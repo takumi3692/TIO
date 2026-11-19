@@ -79,6 +79,7 @@
     <Compile Include="Assets\Script\Player\PlayerAnimationController.cs" />
     <Compile Include="Assets\Script\Network\SpawnArea.cs" />
     <Compile Include="Assets\MyAssets\EasyPeasyFirstPersonController\Scripts\IInputManager.cs" />
+    <Compile Include="Assets\Script\ItemNetwork\NetworkPickupItem.cs" />
     <Compile Include="Assets\MyAssets\EasyPeasyFirstPersonController\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Script\UIManager\LobbySceneUI.cs" />
     <Compile Include="Assets\Script\Player\PlayerInventory.cs" />
