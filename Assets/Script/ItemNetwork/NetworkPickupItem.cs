@@ -12,6 +12,9 @@ public class NetworkPickupItem : NetworkBehaviour
 
     private Rigidbody _rb;
     private Component _floating;
+    private bool _isSpawned = false;
+
+    public bool IsReady => _isSpawned && Object != null && Object.IsValid;
 
     private void Awake()
     {
@@ -21,6 +24,8 @@ public class NetworkPickupItem : NetworkBehaviour
 
     public override void Spawned()
     {
+        _isSpawned = true;
+
         if (HasStateAuthority)
         {
             SyncedPosition = transform.position;
@@ -33,8 +38,15 @@ public class NetworkPickupItem : NetworkBehaviour
         }
     }
 
+    public override void Despawned(NetworkRunner runner, bool hasState)
+    {
+        _isSpawned = false;
+    }
+
     public override void FixedUpdateNetwork()
     {
+        if (!IsReady) return;
+
         if (HasStateAuthority && !IsHeld)
         {
             bool moving = _rb != null && !_rb.isKinematic && _rb.linearVelocity.sqrMagnitude > 0.05f;
@@ -51,7 +63,10 @@ public class NetworkPickupItem : NetworkBehaviour
 
     private void Update()
     {
-        if (!HasStateAuthority && !IsHeld && Object != null && Object.IsValid)
+        // 必ず Spawned() 完了後になってから IsHeld などの通信変数にアクセスする
+        if (!IsReady) return;
+
+        if (!HasStateAuthority && !IsHeld)
         {
             // 投げられて飛んでいる最中だけ座標を滑らかに同期（静止後の浮遊はFloatingPickupに任せる）
             if (IsMoving || _floating == null)
