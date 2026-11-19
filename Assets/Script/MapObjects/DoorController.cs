@@ -3,61 +3,87 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     [Header("開閉の設定")]
-    public float openAngle = 90f;       // 開く角度（逆向きに開く場合は -90 にする）
+    public float openAngle = 90f;       // 開く角度
     public float smoothSpeed = 5f;      // 開閉の滑らかさ
-    public bool openOnTouch = false;    // trueなら体当たり(接触)で開く、falseならEキーで開閉
+    public bool openOnTouch = false;    // trueなら接触で開く、falseならEキーで開閉
+    public bool invertDirection = false;// 開く向きが逆になる場合はチェックを入れる
 
     private bool isOpen = false;
     private bool isPlayerNearby = false;
+    private Transform playerTransform;
     private Quaternion closedRotation;
-    private Quaternion openRotation;
+    private Quaternion targetOpenRotation;
 
     void Start()
     {
-        // 初期の角度を記憶し、開いた時の目標角度を計算
         closedRotation = transform.localRotation;
-        openRotation = Quaternion.Euler(transform.localEulerAngles + new Vector3(0, openAngle, 0));
+        targetOpenRotation = closedRotation;
     }
 
     void Update()
     {
-        // Eキーでの開閉モード（プレイヤーが近くにいる時）
         if (!openOnTouch && isPlayerNearby && Input.GetKeyDown(KeyCode.E))
         {
-            isOpen = !isOpen;
+            if (!isOpen)
+            {
+                OpenDoorAwayFromPlayer();
+            }
+            else
+            {
+                CloseDoor();
+            }
         }
 
-        // 目標の角度に向かって滑らかに回転させる
-        Quaternion targetRotation = isOpen ? openRotation : closedRotation;
-        transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, Time.deltaTime * smoothSpeed);
+        Quaternion target = isOpen ? targetOpenRotation : closedRotation;
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, target, Time.deltaTime * smoothSpeed);
     }
 
-    // プレイヤーが扉のエリアに入った時
+    private void OpenDoorAwayFromPlayer()
+    {
+        isOpen = true;
+        float direction = 1f;
+
+        if (playerTransform != null)
+        {
+            Vector3 toPlayer = (playerTransform.position - transform.position).normalized;
+            float dot = Vector3.Dot(transform.forward, toPlayer);
+            direction = (dot >= 0) ? -1f : 1f;
+        }
+
+        if (invertDirection) direction *= -1f;
+
+        targetOpenRotation = Quaternion.Euler(closedRotation.eulerAngles + new Vector3(0, openAngle * direction, 0));
+    }
+
+    private void CloseDoor()
+    {
+        isOpen = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             isPlayerNearby = true;
+            playerTransform = other.transform;
 
-            // 体当たり（接触）モードなら自動で開く
-            if (openOnTouch)
+            if (openOnTouch && !isOpen)
             {
-                isOpen = true;
+                OpenDoorAwayFromPlayer();
             }
         }
     }
 
-    // プレイヤーが扉のエリアから離れた時
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             isPlayerNearby = false;
+            playerTransform = null;
 
-            // 体当たりモードの場合、離れたら自動で閉まる（閉めたくない場合はこのif文を削除）
-            if (openOnTouch)
+            if (openOnTouch && isOpen)
             {
-                isOpen = false;
+                CloseDoor();
             }
         }
     }
