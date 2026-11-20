@@ -3,7 +3,7 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     [Header("開閉の設定")]
-    public float openAngle = 90f;       // 開く角度
+    public float openAngle = 120f;       // 開く角度
     public float smoothSpeed = 5f;      // 開閉の滑らかさ
     public bool openOnTouch = false;    // trueなら接触で開く、falseならEキーで開閉
     public bool invertDirection = false;// 開く向きが逆になる場合はチェックを入れる

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6580822}
   - component: {fileID: 9177426866165866}
   - component: {fileID: 7298965389278268316}
+  - component: {fileID: 7801486879364608528}
   m_Layer: 0
   m_Name: glass_panel_1_door
   m_TagString: Untagged
@@ -109,11 +110,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.3235092, y: 2.9869292, z: 0.13877574}
+  m_Size: {x: 1.5, y: 3, z: 2}
   m_Center: {x: -0.6881752, y: 1.4934646, z: -0.014756661}
 --- !u!54 &9177426866165866
 Rigidbody:
@@ -158,6 +159,27 @@ MonoBehaviour:
   smoothSpeed: 3
   openOnTouch: 0
   invertDirection: 0
+--- !u!65 &7801486879364608528
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127260}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3, y: 3, z: 0.15}
+  m_Center: {x: -0.6881752, y: 1.4934646, z: -0.014756661}
 --- !u!1 &141970
 GameObject:
   m_ObjectHideFlags: 0
