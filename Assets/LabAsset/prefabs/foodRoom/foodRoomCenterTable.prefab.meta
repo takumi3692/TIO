@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 89a8bb82861b3ce4aa16d82db4b51fde
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/prefabs/foodRoom/foodRoomCenterTable.prefab
+  uploadId: 907960

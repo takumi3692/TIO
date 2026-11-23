@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1383c3660a8298145804ea319b8d1228
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/materials/differentColors/yellow.mat
+  uploadId: 907960

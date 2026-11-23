@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c7c63bd1217ed36439407c892772e2ef
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/prefabs/controlRoom/mouse.prefab
+  uploadId: 907960

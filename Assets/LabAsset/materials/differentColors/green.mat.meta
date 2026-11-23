@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1e9416eacd2856c4b93684f46d626598
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/materials/differentColors/green.mat
+  uploadId: 907960

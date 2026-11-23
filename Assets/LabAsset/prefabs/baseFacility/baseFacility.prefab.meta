@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7b0dcb63bf7008c45a6d54d047c83aac
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/prefabs/baseFacility/baseFacility.prefab
+  uploadId: 907960

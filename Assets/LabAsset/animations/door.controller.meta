@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ab07db308ce789142826bceaa42571d9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/animations/door.controller
+  uploadId: 907960

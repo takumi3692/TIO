@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5c9c428fabc03c54dbb743ac1d463c3d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/prefabs/controlRoom/computersRoomTable.prefab
+  uploadId: 907960

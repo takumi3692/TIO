@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ff4a9ac684be1bf44986e0525f45f4ff
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/materials/differentColors/red.mat
+  uploadId: 907960

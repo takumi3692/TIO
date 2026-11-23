@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ee9ab43bc3d428c4fb98a8b2a917d1ac
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/sampleScene/underWaterLabScene.unity
+  uploadId: 907960

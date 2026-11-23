@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 011dd837db8f5324d8568d7df7c95caa
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/materials/differentColors/purple.mat
+  uploadId: 907960
