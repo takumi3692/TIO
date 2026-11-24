@@ -1,0 +1,6 @@
+This package contains scripted fish. 
+-To change the fish speed you can simply change it in the fish prefab navMeshAgent
+-To change their spawn area or their place they can wander around in you can simply resize the plane "fishRoute" which is in the Hierarchy
+-If you have more fish prefabs you want to add you can add it to the parameter "Prefab Options" which is in the script "Spawn Fish" which is on the empty game object "spawnFishScript" that is in the Hierarchy
+-In the script "spawnFish" that is on the empty gameObject "spawnFishScript" you can change the min and max fish that can be spawned on the start
+- To change the fish "wander radius" and "stopping distance" you can do it on the script that is on each fish prefab

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 112452c234a049c4998e352d15b6cd5e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/materials/meatPackMaterial.mat
+  uploadId: 907960

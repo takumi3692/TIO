@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0707e9c0564f0c442aa94d73d50bc8f0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/prefabs/seaModels/fish2.prefab
+  uploadId: 907960

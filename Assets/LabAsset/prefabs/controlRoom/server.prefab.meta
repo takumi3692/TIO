@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7445cdda98f0aed46be70945ffd87f71
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/prefabs/controlRoom/server.prefab
+  uploadId: 907960

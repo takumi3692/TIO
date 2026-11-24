@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fb25e199a2973ac4190e49ddc04711eb
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/prefabs/labRoom/tablet.prefab
+  uploadId: 907960

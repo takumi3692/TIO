@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5ed069f84d1a2c749b30f4bbd22b4d29
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/prefabs/baseFacility/door.prefab
+  uploadId: 907960

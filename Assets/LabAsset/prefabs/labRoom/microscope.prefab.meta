@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 234c97a5e720fae4fbd7f12bddaa280a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/prefabs/labRoom/microscope.prefab
+  uploadId: 907960

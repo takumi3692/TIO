@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fce42597398466042bfe16fb05868454
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/sampleScene/underWaterVolume.asset
+  uploadId: 907960

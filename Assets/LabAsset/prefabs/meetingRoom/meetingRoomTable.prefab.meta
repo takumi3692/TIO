@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a99d45b84f9c5a248870aebdd9ba372f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/prefabs/meetingRoom/meetingRoomTable.prefab
+  uploadId: 907960

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d5db428f6e457c9448a8e9e4509f23cb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/sampleScene/insideBuildingVolume.asset
+  uploadId: 907960

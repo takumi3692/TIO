@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 16769e548d8f7424aa56ac760d59bbdb
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/prefabs/labRoom/beaker.prefab
+  uploadId: 907960

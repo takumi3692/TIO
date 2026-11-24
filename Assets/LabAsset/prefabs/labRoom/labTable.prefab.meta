@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2aa1f937b51cc174689092e835804464
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/prefabs/labRoom/labTable.prefab
+  uploadId: 907960

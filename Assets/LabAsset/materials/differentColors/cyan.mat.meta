@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a23a43f6d66b1bd43840b823765f334d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/materials/differentColors/cyan.mat
+  uploadId: 907960

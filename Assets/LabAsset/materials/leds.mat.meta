@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fde3e09f28fa8024c80ae4a266603a62
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/materials/leds.mat
+  uploadId: 907960

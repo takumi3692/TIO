@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 604e83e68dc90f542ab392dfa4ba4426
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/materials/normalMaterial.mat
+  uploadId: 907960

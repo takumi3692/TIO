@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6a18aca256f5bfa4d9bd2c7867b3ecbe
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/prefabs/labRoom/aquarium.prefab
+  uploadId: 907960
