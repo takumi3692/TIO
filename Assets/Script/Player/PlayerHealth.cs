@@ -127,6 +127,17 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("プレイヤーが死亡しました！");
     }
 
+    // 外部から即死（HPを0）させる
+    public void Kill()
+    {
+    if (isDead) return;
+
+    currentHealth = 0;
+    UpdateHPBar();
+    PlayDamageEffect();
+    Die();
+    }
+    
     private void PlayDamageEffect()
     {
         if (damageOverlay == null) return;

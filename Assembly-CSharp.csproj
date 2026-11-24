@@ -61,6 +61,7 @@
     <Compile Include="Assets\MyAssets\EasyPeasyFirstPersonController\Scripts\States\PlayerFallState.cs" />
     <Compile Include="Assets\MyAssets\EasyPeasyFirstPersonController\Scripts\States\PlayerSwimmingState.cs" />
     <Compile Include="Assets\Script\Network\SimplePlayerController.cs" />
+    <Compile Include="Assets\Script\MapObjects\ExtractionFloorTimer.cs" />
     <Compile Include="Assets\Script\Network\NetworkInputData.cs" />
     <Compile Include="Assets\MyAssets\EasyPeasyFirstPersonController\Scripts\States\PlayerGroundedState.cs" />
     <Compile Include="Assets\Script\Enemy\EnemyAIController.cs" />
@@ -71,8 +72,10 @@
     <Compile Include="Assets\MyAssets\EasyPeasyFirstPersonController\Scripts\PlayerBaseState.cs" />
     <Compile Include="Assets\LabAsset\scripts\fishMovement.cs" />
     <Compile Include="Assets\Script\Player\PlayerAnimationController.cs" />
+    <Compile Include="Assets\Script\MapObjects\ShutterLeverController.cs" />
     <Compile Include="Assets\Script\Network\SpawnArea.cs" />
     <Compile Include="Assets\Script\Player\WeaponAttack.cs" />
+    <Compile Include="Assets\Script\MapObjects\AbyssKillZone.cs" />
     <Compile Include="Assets\MyAssets\EasyPeasyFirstPersonController\Scripts\IInputManager.cs" />
     <Compile Include="Assets\Script\ItemNetwork\NetworkPickupItem.cs" />
     <Compile Include="Assets\MyAssets\EasyPeasyFirstPersonController\Scripts\FirstPersonController.cs" />
