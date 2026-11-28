@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6bfddf754e00d164da8e994b2ff9944e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/materials/weakMetalMaterial.mat
+  uploadId: 907960

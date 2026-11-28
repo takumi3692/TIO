@@ -155,6 +155,17 @@ public class PlayerHealth : MonoBehaviour
 
         Debug.Log("プレイヤーがダウンしました！");
     }
+    // 外部から即死（HPを0）させる
+    // 外部からHPを0にする
+    public void Kill()
+    {
+        if (isDowned || isDead) return;
+
+        currentHealth = 0;
+        UpdateHPBar();
+        PlayDamageEffect();
+        EnterDownedState();
+    }
 
     // ダメージエフェクト
     private void PlayDamageEffect()

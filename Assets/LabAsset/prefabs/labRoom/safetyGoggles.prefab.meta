@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c3e90b648d5e8d048a62acbbedb230ab
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/prefabs/labRoom/safetyGoggles.prefab
+  uploadId: 907960

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 056c91571e59a3941bb5d6f12cc110f8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/prefabs/foodRoom/cabin.prefab
+  uploadId: 907960

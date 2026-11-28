@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 099d2cc661a725543a53cecd0aff5589
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/scripts/fishMovement.cs
+  uploadId: 907960

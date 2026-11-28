@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6409f6bcbfadc7846bba98f76118649f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/materials/glass.mat
+  uploadId: 907960

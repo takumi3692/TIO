@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 25fb4edaf61bdf54ba1a66437be63276
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/scripts/fishScriptInstructions.txt
+  uploadId: 907960

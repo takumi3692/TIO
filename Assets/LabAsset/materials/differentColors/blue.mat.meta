@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 215cde621aa71994989b3f4f1a1e1d5c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/materials/differentColors/blue.mat
+  uploadId: 907960

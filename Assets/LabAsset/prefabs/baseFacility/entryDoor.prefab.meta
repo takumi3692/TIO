@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e0442ff82bf10f04399c8eb7bbd3b903
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/prefabs/baseFacility/entryDoor.prefab
+  uploadId: 907960

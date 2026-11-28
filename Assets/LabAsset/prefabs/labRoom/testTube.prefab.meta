@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 29593ec685be2f84fa9b3f74f4a203d4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 373860
+  packageName: UnderWater Lab
+  packageVersion: 1.0
+  assetPath: Assets/underWaterLab/prefabs/labRoom/testTube.prefab
+  uploadId: 907960
