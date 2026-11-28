@@ -165,20 +165,23 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
+    
     public void DropItem()
     {
-        ReleaseSelected(Vector3.zero);
+        ReleaseSelected(Vector3.zero, false);
     }
 
     public void ThrowItem()
     {
         if (playerCamera == null) return;
 
-        Vector3 force = playerCamera.transform.forward * throwForce;
-        ReleaseSelected(force);
+        Vector3 force =
+            playerCamera.transform.forward * throwForce;
+
+        ReleaseSelected(force, true);
     }
 
-    private void ReleaseSelected(Vector3 force)
+    private void ReleaseSelected(Vector3 force, bool isThrown)
     {
         PickupItem item = items[selectedSlot];
 
@@ -193,10 +196,23 @@ public class PlayerInventory : MonoBehaviour
 
         UpdateSlotVisual(selectedSlot);
 
+        // 投げた場合だけ破壊判定を有効にする
+        if (isThrown)
+        {
+            ThrownItem thrownItem =
+                item.GetComponent<ThrownItem>();
+
+            if (thrownItem != null)
+                thrownItem.MarkAsThrown();
+        }
+
         item.Release(force);
 
-        Debug.Log("アイテムを手放しました。");
+        Debug.Log(isThrown
+            ? "アイテムを投げました！"
+            : "アイテムを落としました。");
     }
+
 
     public bool IsFull()
     {
