@@ -1,7 +1,9 @@
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 using EasyPeasyFirstPersonController;
 using UnityEngine.UI;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -12,12 +14,15 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Slider hpSlider;
 
     private int currentHealth;
+    private bool isDowned = false;
     private bool isDead = false;
 
     [Header("Player Components")]
     private FirstPersonController movementController;
     private PlayerInventory inventoryController;
     private PlayerPickup pickupController;
+    private WeaponAttack weaponAttackController;
+    private Animator playerAnimator;
 
     [Header("Damage Effect")]
     [SerializeField] private Image damageOverlay;
@@ -27,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
 
     public int CurrentHealth => currentHealth;
     public int MaxHealth => maxHealth;
+    public bool IsDowned => isDowned;
     public bool IsDead => isDead;
 
     private void Awake()
@@ -39,16 +45,20 @@ public class PlayerHealth : MonoBehaviour
             hpSlider.value = currentHealth;
         }
 
-        // 同じGameObjectから各コンポーネントを取得
+        // プレイヤーのコンポーネントを取得
         movementController = GetComponent<FirstPersonController>();
         inventoryController = GetComponent<PlayerInventory>();
         pickupController = GetComponent<PlayerPickup>();
+        weaponAttackController = GetComponent<WeaponAttack>();
+
+        // 子オブジェクトからAnimatorを取得
+        playerAnimator = GetComponentInChildren<Animator>();
     }
 
     private void Update()
     {
         if (Keyboard.current == null) return;
-        if (isDead) return;
+        if (isDowned || isDead) return;
 
         // Kキーで10ダメージ（テスト用）
         if (Keyboard.current.kKey.wasPressedThisFrame)
@@ -63,6 +73,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    // HPバー更新
     private void UpdateHPBar()
     {
         if (hpSlider != null)
@@ -74,7 +85,7 @@ public class PlayerHealth : MonoBehaviour
     // ダメージを受ける
     public void TakeDamage(int damage)
     {
-        if (isDead) return;
+        if (isDowned || isDead) return;
         if (damage <= 0) return;
 
         currentHealth -= damage;
@@ -87,14 +98,14 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Die();
+            EnterDownedState();
         }
     }
 
-    // 回復する
+    // 回復（テスト用）
     public void Heal(int amount)
     {
-        if (isDead) return;
+        if (isDowned || isDead) return;
         if (amount <= 0) return;
 
         currentHealth += amount;
@@ -105,39 +116,60 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("HP: " + currentHealth + " / " + maxHealth);
     }
 
-    // 死亡処理
-    private void Die()
+    // ダウン状態にする
+    private void EnterDownedState()
     {
-        if (isDead) return;
+        if (isDowned || isDead) return;
 
-        isDead = true;
+        isDowned = true;
 
         // 移動・視点操作を停止
         if (movementController != null)
+        {
             movementController.enabled = false;
+        }
 
-        // アイテム操作を停止
+        // インベントリ操作を停止
         if (inventoryController != null)
+        {
             inventoryController.enabled = false;
+        }
 
         // アイテム取得を停止
         if (pickupController != null)
+        {
             pickupController.enabled = false;
+        }
 
-        Debug.Log("プレイヤーが死亡しました！");
+        // 武器攻撃を停止
+        if (weaponAttackController != null)
+        {
+            weaponAttackController.enabled = false;
+        }
+
+        // ダウンアニメーションを再生
+        if (playerAnimator != null)
+        {
+            playerAnimator.SetTrigger("Down");
+        }
+
+        Debug.Log("プレイヤーがダウンしました！");
     }
 
+    // ダメージエフェクト
     private void PlayDamageEffect()
     {
         if (damageOverlay == null) return;
 
         if (flashCoroutine != null)
+        {
             StopCoroutine(flashCoroutine);
+        }
 
         flashCoroutine = StartCoroutine(DamageFlash());
     }
 
-    private System.Collections.IEnumerator DamageFlash()
+    private IEnumerator DamageFlash()
     {
         Color color = damageOverlay.color;
         color.a = 0.4f;
