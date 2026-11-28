@@ -9,8 +9,8 @@ public class ResultAndGameOverUI : MonoBehaviour
 
     [Header("UI要素")]
     [SerializeField] private TMP_Text resultSummaryText;
-    [SerializeField] private Button nextDayButton;        // Result画面用：次の日へ（ホストのみ有効）
-    [SerializeField] private Button returnToTitleButton;  // タイトルへ戻るボタン
+    [SerializeField] private Button nextDayButton;
+    [SerializeField] private Button returnToTitleButton;
 
     private void Start()
     {
@@ -25,15 +25,20 @@ public class ResultAndGameOverUI : MonoBehaviour
         {
             if (isGameOverScreen)
             {
+                string reasonLine = string.IsNullOrEmpty(GameProgressData.LastEndReason)
+                    ? ""
+                    : $"理由: {GameProgressData.LastEndReason}\n\n";
+
                 resultSummaryText.text =
                     $"GAME OVER\n\n" +
+                    reasonLine +
                     $"到達日数: Day {GameProgressData.CurrentDay}\n" +
-                    $"最終納品額: {GameProgressData.DeliveredAmount} / 目標 {GameProgressData.CurrentQuota}";
+                    $"チーム最終納品額: {GameProgressData.DeliveredAmount} / 目標 {GameProgressData.CurrentQuota}";
             }
             else if (GameProgressData.WasQuotaCheckDay)
             {
                 resultSummaryText.text =
-                    $"ノルマ達成！クリア！\n\n" +
+                    $"チームノルマ達成！クリア！\n\n" +
                     $"達成納品額: {GameProgressData.PreviousDelivered} / {GameProgressData.PreviousQuota}\n" +
                     $"次の目標（Day {GameProgressData.CurrentDay}〜）: {GameProgressData.CurrentQuota}";
             }
@@ -41,8 +46,8 @@ public class ResultAndGameOverUI : MonoBehaviour
             {
                 resultSummaryText.text =
                     $"Day {GameProgressData.CurrentDay - 1} 帰還成功！\n\n" +
-                    $"本日の獲得額: +{GameProgressData.LastDayEarned}\n" +
-                    $"現在の累計納品額: {GameProgressData.DeliveredAmount} / {GameProgressData.CurrentQuota}\n" +
+                    $"本日のチーム獲得額: +{GameProgressData.LastDayEarned}\n" +
+                    $"チーム累計納品額: {GameProgressData.DeliveredAmount} / 目標 {GameProgressData.CurrentQuota}\n" +
                     $"ノルマ判定日まであと {GameProgressData.DaysRemainingInCycle} 日";
             }
         }
@@ -62,7 +67,6 @@ public class ResultAndGameOverUI : MonoBehaviour
     private void OnClickNextDay()
     {
         nextDayButton.interactable = false;
-        // 3,Load を経由して次の日の 5,Stage へ全員で移動
         NetworkManager.Instance.LoadSceneWithLoadingScreen(NetworkManager.STAGE_SCENE_INDEX);
     }
 

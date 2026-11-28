@@ -2,42 +2,65 @@ using System.Collections.Generic;
 using Fusion;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(BoxCollider))]
 public class ReturnVehicleZone : MonoBehaviour
 {
     public static ReturnVehicleZone Instance { get; private set; }
 
-    private readonly HashSet<NetworkObject> _playersInside = new HashSet<NetworkObject>();
+    private BoxCollider _boxCollider;
 
     private void Awake()
     {
         Instance = this;
-        GetComponent<Collider>().isTrigger = true;
+        _boxCollider = GetComponent<BoxCollider>();
+        _boxCollider.isTrigger = true;
     }
 
-    private void OnTriggerEnter(Collider other)
+    /// <summary>
+    /// 指定したプレイヤーが現在乗車エリア内にいるかを確実に判定する
+    /// </summary>
+    public bool IsPlayerInside(NetworkPlayerSetup playerSetup)
     {
-        NetworkObject playerNetObj = other.GetComponentInParent<NetworkObject>();
-        if (playerNetObj != null && playerNetObj.GetComponent<NetworkPlayerSetup>() != null)
+        if (playerSetup == null || _boxCollider == null) return false;
+
+        // マイナスScale対策：絶対値でワールド空間の判定ボックスを計算
+        Vector3 worldCenter = transform.TransformPoint(_boxCollider.center);
+        Vector3 lossy = transform.lossyScale;
+        Vector3 halfExtents = new Vector3(
+            Mathf.Abs(_boxCollider.size.x * lossy.x) * 0.5f,
+            Mathf.Abs(_boxCollider.size.y * lossy.y) * 0.5f,
+            Mathf.Abs(_boxCollider.size.z * lossy.z) * 0.5f
+        );
+
+        Collider[] hits = Physics.OverlapBox(
+            worldCenter,
+            halfExtents,
+            transform.rotation,
+            Physics.AllLayers,
+            QueryTriggerInteraction.Collide
+        );
+
+        foreach (var hit in hits)
         {
-            _playersInside.Add(playerNetObj);
-            Debug.Log($"[帰りの車] 乗車検知 (車内人数: {_playersInside.Count}人)");
+            NetworkPlayerSetup found = hit.GetComponentInParent<NetworkPlayerSetup>();
+            if (found == playerSetup)
+            {
+                return true;
+            }
         }
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        NetworkObject playerNetObj = other.GetComponentInParent<NetworkObject>();
-        if (playerNetObj != null && _playersInside.Contains(playerNetObj))
-        {
-            _playersInside.Remove(playerNetObj);
-            Debug.Log($"[帰りの車] 降車検知 (車内人数: {_playersInside.Count}人)");
-        }
-    }
+        // フォールバック：実際に移動する本体（CharacterController等）の座標がボックス内にあるか直接チェック
+        CharacterController cc = playerSetup.GetComponentInChildren<CharacterController>(true);
+        Transform checkTarget = (cc != null) ? cc.transform : playerSetup.transform;
+        Vector3 localPos = transform.InverseTransformPoint(checkTarget.position + Vector3.up * 0.5f) - _boxCollider.center;
+        Vector3 halfSize = new Vector3(
+            Mathf.Abs(_boxCollider.size.x) * 0.5f,
+            Mathf.Abs(_boxCollider.size.y) * 0.5f,
+            Mathf.Abs(_boxCollider.size.z) * 0.5f
+        );
 
-    public bool IsPlayerInside(NetworkObject playerNetObj)
-    {
-        _playersInside.RemoveWhere(p => p == null || !p.IsValid);
-        return playerNetObj != null && _playersInside.Contains(playerNetObj);
+        return Mathf.Abs(localPos.x) <= halfSize.x &&
+               Mathf.Abs(localPos.y) <= halfSize.y &&
+               Mathf.Abs(localPos.z) <= halfSize.z;
     }
 }

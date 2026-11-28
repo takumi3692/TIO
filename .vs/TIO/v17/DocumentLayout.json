@@ -7,24 +7,24 @@
       "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\network\\resultandgameoverui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\assets\\script\\network\\stagegamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\network\\stagegamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\assets\\script\\network\\returnvehiclezone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\network\\returnvehiclezone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\assets\\script\\network\\stagegamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\network\\stagegamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\assets\\script\\network\\deliveryzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\network\\deliveryzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\assets\\script\\network\\treasureitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\network\\treasureitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\assets\\script\\network\\gameprogressdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\network\\gameprogressdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\assets\\script\\network\\treasureitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\network\\treasureitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{318719C8-D553-AE27-3124-677445FC809B}|Assembly-CSharp.csproj|C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\assets\\script\\network\\networkinputdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -92,34 +92,36 @@
               "RelativeDocumentMoniker": "Assets\\Script\\Network\\ResultAndGameOverUI.cs",
               "ToolTip": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\ResultAndGameOverUI.cs",
               "RelativeToolTip": "Assets\\Script\\Network\\ResultAndGameOverUI.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAmwE0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAmwFEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-24T19:02:15.626Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "StageGameManager.cs",
               "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\StageGameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Network\\StageGameManager.cs",
               "ToolTip": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\StageGameManager.cs",
               "RelativeToolTip": "Assets\\Script\\Network\\StageGameManager.cs",
-              "ViewState": "AgIAALMAAAAAAAAAAAAowMoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAEABAAAAAAAAAAAmwF8BAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T19:01:44.33Z"
+              "WhenOpened": "2026-11-24T19:01:44.33Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ReturnVehicleZone.cs",
               "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\ReturnVehicleZone.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Network\\ReturnVehicleZone.cs",
               "ToolTip": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\ReturnVehicleZone.cs",
               "RelativeToolTip": "Assets\\Script\\Network\\ReturnVehicleZone.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA4wCoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAmwEEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T19:01:32.595Z"
+              "WhenOpened": "2026-11-24T19:01:32.595Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -129,33 +131,36 @@
               "RelativeDocumentMoniker": "Assets\\Script\\Network\\DeliveryZone.cs",
               "ToolTip": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\DeliveryZone.cs",
               "RelativeToolTip": "Assets\\Script\\Network\\DeliveryZone.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAmwCIAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAmwDUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T19:00:52.935Z"
+              "WhenOpened": "2026-11-24T19:00:52.935Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TreasureItem.cs",
               "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\TreasureItem.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Network\\TreasureItem.cs",
               "ToolTip": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\TreasureItem.cs",
               "RelativeToolTip": "Assets\\Script\\Network\\TreasureItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T18:59:48.906Z"
+              "WhenOpened": "2026-11-24T18:59:48.906Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "GameProgressData.cs",
               "DocumentMoniker": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\GameProgressData.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Network\\GameProgressData.cs",
               "ToolTip": "C:\\Users\\mitsu\\Documents\\GitHub\\TIO\\Assets\\Script\\Network\\GameProgressData.cs",
               "RelativeToolTip": "Assets\\Script\\Network\\GameProgressData.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAmwEoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAmwH8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T18:55:06.682Z"
+              "WhenOpened": "2026-11-24T18:55:06.682Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
